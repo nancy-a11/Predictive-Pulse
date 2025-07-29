@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter Patient Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    nav a {
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #1e3a8a;
+      color: #ffffff;
+      border-radius: 0.375rem;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const inputs = document.querySelectorAll('input, select');
+      inputs.forEach(input => {
+        input.addEventListener('input', () => input.setCustomValidity(''));
+      });
+    });
+  </script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-800 via-blue-900 to-gray-900 text-gray-100 min-h-screen">
+  {% include 'header.html' %}
+
+  <div class="flex justify-center items-center py-16 px-6">
+    <div class="bg-gray-200 p-10 rounded-2xl shadow-xl max-w-3xl w-full border border-blue-400 text-gray-800">
+      <h2 class="text-4xl font-bold text-center mb-8 text-blue-700">Patient Health Details</h2>
+
+      <form action="/predict" method="POST" class="space-y-5 text-lg">
+        <div>
+          <label class="block mb-1">Age</label>
+          <input type="number" name="Age" min="1" max="120" required
+            oninvalid="this.setCustomValidity('Please enter a valid age between 1 and 120')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+        </div>
+
+        <div>
+          <label class="block mb-1">Gender</label>
+          <select name="Gender" required
+            oninvalid="this.setCustomValidity('Please select a gender')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1">Previous History?</label>
+          <select name="History" required
+            oninvalid="this.setCustomValidity('Please select history status')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1">Currently Diagnosed?</label>
+          <select name="Patient" required
+            oninvalid="this.setCustomValidity('Please select diagnosis status')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1">Taking Medication?</label>
+          <select name="TakeMedication" required
+            oninvalid="this.setCustomValidity('Please select medication status')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1">Severity Level</label>
+          <select name="Severity" required
+            oninvalid="this.setCustomValidity('Please select severity level')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="Mild">Mild</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Severe">Severe</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1">Breath Shortness?</label>
+          <select name="BreathShortness" required
+            oninvalid="this.setCustomValidity('Please select breath shortness status')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1">Visual Changes?</label>
+          <select name="VisualChanges" required
+            oninvalid="this.setCustomValidity('Please select visual changes status')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1">Nose Bleeding?</label>
+          <select name="NoseBleeding" required
+            oninvalid="this.setCustomValidity('Please select nose bleeding status')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1">When Diagnosed?</label>
+          <select name="Whendiagnoused" required
+            oninvalid="this.setCustomValidity('Please select diagnosis duration')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="<1 Year">&lt;1 Year</option>
+            <option value="1 - 5 Years">1 - 5 Years</option>
+            <option value=">5 Years">&gt;5 Years</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1">Systolic Pressure</label>
+          <input type="number" step="0.1" name="Systolic" min="70" max="250" required
+            oninvalid="this.setCustomValidity('Please enter a valid systolic pressure (70–250)')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+        </div>
+
+        <div>
+          <label class="block mb-1">Diastolic Pressure</label>
+          <input type="number" step="0.1" name="Diastolic" min="40" max="150" required
+            oninvalid="this.setCustomValidity('Please enter a valid diastolic pressure (40–150)')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+        </div>
+
+        <div>
+          <label class="block mb-1">Controlled Diet?</label>
+          <select name="ControlledDiet" required
+            oninvalid="this.setCustomValidity('Please select diet status')"
+            class="w-full p-3 rounded bg-blue-50 border border-blue-300">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+
+        <div class="pt-6">
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded text-xl transition">
+            Predict Blood Pressure Stage
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  {% include 'footer.html' %}
+</body>
+</html>

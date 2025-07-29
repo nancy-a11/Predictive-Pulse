@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Results</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+   
+    nav a {
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #1e3a8a;
+      color: #ffffff;
+      border-radius: 0.375rem;
+    }
+  
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-800 via-blue-900 to-gray-900 text-gray-100 min-h-screen">
+  {% include 'header.html' %}
+
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 py-12">
+    <div id="loader-container" class="flex flex-col items-center animate-fadeIn">
+      <div class="border-4 border-cyan-400 border-t-cyan-600 rounded-full w-20 h-20 animate-spin mb-6"></div>
+      <p class="text-2xl text-blue-200">Predicting your blood pressure...</p>
+    </div>
+
+    <div id="result-section" class="hidden max-w-xl w-full mt-10 bg-gray-100 text-gray-800 rounded-2xl p-10 shadow-2xl text-center">
+      <h2 class="text-4xl font-bold text-blue-700 mb-6">Prediction Results</h2>
+      <p class="text-xl mb-3"><strong>Systolic Pressure:</strong> {{ systolic }} mmHg</p>
+      <p class="text-xl mb-3"><strong>Diastolic Pressure:</strong> {{ diastolic }} mmHg</p>
+      <p class="text-2xl mt-6 text-green-600 font-semibold"><strong>Blood Pressure Stage:</strong> {{ stage }}</p>
+    </div>
+  </div>
+
+  {% include 'footer.html' %}
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("loader-container").style.animation = "fadeOut 0.5s forwards";
+      setTimeout(() => {
+        document.getElementById("loader-container").style.display = "none";
+        document.getElementById("result-section").style.display = "block";
+      }, 500);
+    }, 2500);
+  </script>
+</body>
+</html>
