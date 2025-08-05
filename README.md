@@ -1,6 +1,6 @@
 #  Predictive Pulse – Blood Pressure Prediction Using AI & ML
 
-A smart and user-friendly Blood Pressure Prediction system that uses Machine Learning to analyze health parameters and predict hypertension stages. This application is built using Python, Flask for the backend, and Jupyter Notebook for model development and experimentation.
+A smart and user-friendly Blood Pressure Stage Prediction system that uses Machine Learning to analyze health parameters and predict hypertension stages. This application is built using Python, Flask for the backend, and Jupyter Notebook for model development and experimentation.
 
 ---
 
@@ -18,13 +18,13 @@ A smart and user-friendly Blood Pressure Prediction system that uses Machine Lea
 ##  Machine Learning Pipeline
 
 1. **Data Collection**
-   - Dataset used from [Kaggle - Blood Pressure Dataset](https://www.kaggle.com/)
+   - Dataset provided by the trainer
 2. **Preprocessing**
    - Handling missing values, encoding categorical data
 3. **EDA (Exploratory Data Analysis)**
    - Visualized using Seaborn and Matplotlib
 4. **Model Building**
-   - Algorithms: Random Forest, Logistic Regression, Naive Bayes, Decision Tree, KNN
+   - Algorithms: Random Forest, Logistic Regression, Naive Bayes, Decision Tree(classification models)
 5. **Evaluation**
    - Metrics: Accuracy, Precision, Recall, F1-Score, Confusion Matrix
 6. **Hyperparameter Tuning**
@@ -36,18 +36,23 @@ A smart and user-friendly Blood Pressure Prediction system that uses Machine Lea
 
 ##  Project Structure
 ```
-BloodPressurePredictor/
+Predictive Pulse/
 │
-├── app.py                      # Flask backend
-├── templates/
-│   └── index.html              # Web UI
-├── static/
-│   └── style.css               # Optional CSS file
+├── app.py # Flask backend application
+├── templates/ # HTML Templates
+│ ├── index.html # Home page
+│ ├── header.html # Header component
+│ ├── footer.html # Footer component
+│ ├── prediction.html # Prediction result page
+│ └── detail.html # Detailed insights page
+│
+├── static/ # Static files
+│ └── hypertension.png # UI image (example)
+│
 ├── model/
-│   └── bp_model.pkl            # Trained ML model (serialized)
-├── notebooks/
-│   └── blood_pressure_model.ipynb   # Jupyter Notebook with EDA and training
-└── README.md
+│ └── random_forest_stage_model.pkl # Serialized Random Forest model
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
 ```
 ---
 
@@ -59,7 +64,7 @@ BloodPressurePredictor/
 - **Pandas**
 - **Matplotlib & Seaborn**
 - **Jupyter Notebook**
-- **HTML/CSS**
+- **HTML/Tailwind CSS**
 
 ---
 
@@ -75,8 +80,7 @@ BloodPressurePredictor/
 
 The project is deployed using **[Render](https://render.com/)** – a cloud platform for hosting full-stack applications.
 
-🔗 **Live Project Link**: [https://your-live-render-link.onrender.com](https://your-live-render-link.onrender.com)  
-*(Replace with your actual live link)*
+🔗 **Live Project Link**: [https://your-live-render-link.onrender.com](https://predictive-pulse-flask.onrender.com)  
 
 Render makes deployment seamless with automatic builds from GitHub and a production-ready environment.
 
@@ -112,7 +116,7 @@ http://127.0.0.1:5000/
 
 ##  Contributors
 
-Made with ❤️ by:
+Made by:
 - [@nancy-a11](https://github.com/nancy-a11)
 - [@tiwarisristy](https://github.com/tiwarisristy)
 - [@NITB1810](https://github.com/NITB1810)
@@ -121,7 +125,7 @@ Made with ❤️ by:
 
 ## 📌 Acknowledgments
 
-- **SmartInternz Internship Program**
+- **The SmartBridge Experimental Learning Program**
 
 
 ---
