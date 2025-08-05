@@ -71,8 +71,16 @@ BloodPressurePredictor/
   - Hyperparameters tuned using GridSearchCV
 
 ---
+## 🌍 Deployment & Hosting
 
-##  How to Run
+The project is deployed using **[Render](https://render.com/)** – a cloud platform for hosting full-stack applications.
+
+🔗 **Live Project Link**: [https://your-live-render-link.onrender.com](https://your-live-render-link.onrender.com)  
+*(Replace with your actual live link)*
+
+Render makes deployment seamless with automatic builds from GitHub and a production-ready environment.
+
+##  How to Run Locally
 
 1. **Clone the Repository**
 ```bash
@@ -104,7 +112,7 @@ http://127.0.0.1:5000/
 
 ##  Contributors
 
-Made with  by:
+Made with ❤️ by:
 - [@nancy-a11](https://github.com/nancy-a11)
 - [@tiwarisristy](https://github.com/tiwarisristy)
 - [@NITB1810](https://github.com/NITB1810)
