@@ -80,7 +80,7 @@ Predictive Pulse/
 
 The project is deployed using **[Render](https://render.com/)** – a cloud platform for hosting full-stack applications.
 
-🔗 **Live Project Link**: [https://your-live-render-link.onrender.com](https://predictive-pulse-flask.onrender.com)  
+🔗 **Live Project Link**: [https://predictive-pulse-flask.onrender.com] 
 
 Render makes deployment seamless with automatic builds from GitHub and a production-ready environment.
 
