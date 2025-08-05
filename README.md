@@ -1,21 +1,21 @@
-# 🩺 Predictive Pulse – Blood Pressure Prediction Using AI & ML
+#  Predictive Pulse – Blood Pressure Prediction Using AI & ML
 
 A smart and user-friendly Blood Pressure Prediction system that uses Machine Learning to analyze health parameters and predict hypertension stages. This application is built using Python, Flask for the backend, and Jupyter Notebook for model development and experimentation.
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 💻 Flask-based web application with a clean HTML UI
-- 🧠 ML models including Random Forest, Logistic Regression, and Naive Bayes
-- 📈 Real-time prediction of blood pressure category (e.g., Normal, Elevated, Hypertension)
-- 📊 Jupyter Notebook used for EDA, model building, and evaluation
-- 💾 Model serialization using `joblib`
-- 🔎 Performance analysis with accuracy, F1-score, precision, and confusion matrix
+-  Flask-based web application with a clean HTML UI
+-  ML models including Random Forest, Logistic Regression, and Naive Bayes
+-  Real-time prediction of blood pressure category (e.g., Normal, Elevated, Hypertension)
+-  Jupyter Notebook used for EDA, model building, and evaluation
+-  Model serialization using `joblib`
+-  Performance analysis with accuracy, F1-score, precision, and confusion matrix
 
 ---
 
-## 🧠 Machine Learning Pipeline
+##  Machine Learning Pipeline
 
 1. **Data Collection**
    - Dataset used from [Kaggle - Blood Pressure Dataset](https://www.kaggle.com/)
@@ -34,7 +34,7 @@ A smart and user-friendly Blood Pressure Prediction system that uses Machine Lea
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 ```
 BloodPressurePredictor/
 │
@@ -51,7 +51,7 @@ BloodPressurePredictor/
 ```
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 - **Python 3.8+**
 - **Flask**
@@ -63,16 +63,16 @@ BloodPressurePredictor/
 
 ---
 
-## 📊 Model Performance
+##  Model Performance
 
-- ✅ **Random Forest** achieved the best results:
+-  **Random Forest** achieved the best results:
   - **Accuracy:** ~93%
   - **F1 Score:** 0.91
   - Hyperparameters tuned using GridSearchCV
 
 ---
 
-## 🔗 How to Run
+##  How to Run
 
 1. **Clone the Repository**
 ```bash
@@ -102,27 +102,18 @@ http://127.0.0.1:5000/
 
 ---
 
-## 👥 Contributors
+##  Contributors
 
-Made with ❤️ by:
+Made with  by:
 - [@nancy-a11](https://github.com/nancy-a11)
 - [@tiwarisristy](https://github.com/tiwarisristy)
 - [@NITB1810](https://github.com/NITB1810)
 - [@amitsavani-45](https://github.com/amitsavani-45)
 
 
----
-
-## 📄 License
-
-This project is for educational purposes and is licensed under the MIT License.
-
----
-
 ## 📌 Acknowledgments
 
 - **SmartInternz Internship Program**
-- Dataset Source: Kaggle
-- Faculty Mentor: Dr. Y. Srinivasa Rao
+
 
 ---
